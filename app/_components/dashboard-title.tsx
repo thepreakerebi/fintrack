@@ -2,8 +2,13 @@
 
 import { ChevronDownIcon, MoreHorizontalIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useEffect, useState } from "react"
+import DashboardTitleSkeleton from "./dashboard-title-skeleton"
 
 export default function DashboardTitle() {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+  if (!mounted) return <DashboardTitleSkeleton />
   return (
     <header className="flex flex-col sm:flex-row md:items-center justify-between gap-4 w-full">
       {/* Left group */}

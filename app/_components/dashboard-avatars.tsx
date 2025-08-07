@@ -2,9 +2,15 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { usePeopleStore } from "@/hooks/use-people"
+import DashboardAvatarsSkeleton from "./dashboard-avatars-skeleton"
 
 export default function DashboardAvatars() {
   const people = usePeopleStore((s) => s.people)
+
+  if (people.length === 0) {
+    return <DashboardAvatarsSkeleton />
+  }
+
 
   const displayed = people.slice(0, 4)
 
