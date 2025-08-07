@@ -2,6 +2,7 @@
 
 import DashboardTitle from "./dashboard-title"
 import DashboardAvatars from "./dashboard-avatars"
+import DashboardTabs from "./dashboard-tabs"
 
 export default function DashboardHeader() {
   return (
@@ -15,8 +16,10 @@ export default function DashboardHeader() {
         {/* Dashboard avatars component */}
         <DashboardAvatars />
       </section>
-      {/* Placeholder for breadcrumbs or other header content */}
-      <section></section>
+      {/* Tabs */}
+      <section>
+        <DashboardTabs />
+      </section>
     </header>
   )
 }
