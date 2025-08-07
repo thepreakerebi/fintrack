@@ -28,7 +28,7 @@ export default function Topbar() {
           <LayoutGridIcon className="size-5" />
         </Button>
         <Avatar>
-          <AvatarImage src="https://ui.shadcn.com/avatars/01.png" alt="User" />
+          <AvatarImage src="/ava.png" alt="Ava" />
           <AvatarFallback>FT</AvatarFallback>
         </Avatar>
       </section>
