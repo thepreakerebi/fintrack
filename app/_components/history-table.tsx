@@ -23,6 +23,7 @@ import { ArrowUpDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useState, useEffect } from "react"
 import HistoryTableSkeleton from "./history-table-skeleton"
+import HistoryTableEmpty from "./history-table-empty"
 
 export default function HistoryTable() {
   const [mounted, setMounted] = useState(false)
@@ -95,8 +96,11 @@ export default function HistoryTable() {
     getSortedRowModel: getSortedRowModel(),
   })
 
-  if (!mounted || transactions.length === 0) {
+  if (!mounted) {
     return <HistoryTableSkeleton />
+  }
+  if (transactions.length === 0) {
+    return <HistoryTableEmpty />
   }
 
   return (
