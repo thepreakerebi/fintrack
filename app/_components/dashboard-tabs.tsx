@@ -3,6 +3,7 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import Summary from "./summary"
 import HistoryTable from "./history-table"
+import TransactionsEmpty from "./transactions-empty"
 
 export default function DashboardTabs() {
   return (
@@ -32,7 +33,7 @@ export default function DashboardTabs() {
         <HistoryTable />
       </TabsContent>
       <TabsContent value="transactions" className="py-6">
-        <p className="text-sm text-muted-foreground">Transactions content placeholder.</p>
+        <TransactionsEmpty />
       </TabsContent>
     </Tabs>
   )
