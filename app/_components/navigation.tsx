@@ -17,6 +17,7 @@ import {
   BarChart2Icon,
   SettingsIcon,
 } from "lucide-react"
+import { ThemeSwitcher } from "./theme-switcher"
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -81,8 +82,9 @@ export default function Navigation() {
         </SidebarMenu>
       </SidebarContent>
 
-      {/* Footer (empty for now) */}
-      <SidebarFooter />
+      <SidebarFooter className="mt-auto px-4 md:px-0">
+        <ThemeSwitcher />
+      </SidebarFooter>
     </Sidebar>
   )
 }
