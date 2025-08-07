@@ -29,6 +29,19 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## About Fintrack
+
+Fintrack is a modern finance dashboard built with Next.js 15, Tailwind CSS, shadcn/ui and Zustand.
+Features implemented so far:
+
+- Responsive sidebar with keyboard toggle and mobile support
+- Sticky topbar with command-palette search
+- Summary cards, animated skeletons & empty states
+- Sortable transactions table powered by TanStack React-Table
+- Global theme switcher (light / dark / system)
+
+Explore the live demo 👉 **https://use-fintrack.vercel.app/**
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
