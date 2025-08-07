@@ -18,11 +18,15 @@ import {
   SortingState,
   useReactTable,
 } from "@tanstack/react-table"
-import { useState } from "react"
+
 import { ArrowUpDown } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { useState, useEffect } from "react"
+import HistoryTableSkeleton from "./history-table-skeleton"
 
 export default function HistoryTable() {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
   const transactions = useTransactionsStore((s) => s.transactions)
   const [sorting, setSorting] = useState<SortingState>([])
 
@@ -90,6 +94,10 @@ export default function HistoryTable() {
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
   })
+
+  if (!mounted || transactions.length === 0) {
+    return <HistoryTableSkeleton />
+  }
 
   return (
     <section className="flex flex-col gap-4 py-7">
