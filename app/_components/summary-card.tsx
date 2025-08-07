@@ -12,7 +12,7 @@ interface SummaryCardProps {
 export default function SummaryCard({ title, value, change }: SummaryCardProps) {
   const isPositive = change >= 0
   return (
-    <section className="relative flex flex-col gap-4 rounded-2xl bg-muted/50 p-8 sm:p-10">
+    <section className="relative flex flex-col gap-4 rounded-2xl bg-primary/5 p-8 sm:p-10">
       {/* Title & menu */}
       <section className="flex items-center justify-between w-full">
         <h3 className="text-xl font-semibold leading-none text-foreground/90 w-full">{title}</h3>
