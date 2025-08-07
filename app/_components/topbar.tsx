@@ -12,15 +12,15 @@ import Image from "next/image"
 
 export default function Topbar() {
   return (
-    <header className="flex w-full items-center justify-between gap-7 px-12 py-3">
+    <header className="flex w-full items-center justify-between gap-7 px-2 md:px-12 py-3">
       {/* Left section: Sidebar trigger and logo */}
-      <section className="flex items-center gap-7">
+      <section className="flex items-center gap-1 md:gap-7">
         <SidebarTrigger />
         <Image src="/logo.svg" alt="Fintrack logo" width={112} height={33} className="h-8 w-auto" priority />
       </section>
 
       {/* Right section: Search, Grid, Avatar */}
-      <section className="flex items-center gap-7">
+      <section className="flex items-center gap-1 md:gap-7">
         <Button variant="ghost" size="icon" aria-label="Search">
           <SearchIcon className="size-5" />
         </Button>

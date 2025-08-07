@@ -37,7 +37,7 @@ export default function Navigation() {
       <SidebarHeader />
 
       {/* Navigation Content */}
-      <SidebarContent>
+      <SidebarContent className="px-4 md:px-0">
         <SidebarMenu>
           {/* Dashboard */}
           <SidebarMenuItem>
