@@ -1,13 +1,14 @@
 "use client"
 
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
+import Summary from "./summary"
 
 export default function DashboardTabs() {
   return (
     <Tabs defaultValue="overview" className="w-full">
       {/* Sticky tab list */}
       <TabsList
-        className="sticky top-16 z-40 flex w-full justify-start bg-background border-b border-border rounded-none p-0"
+        className="sticky top-14 z-40 flex w-full justify-start bg-background border-b border-border rounded-none p-0"
       >
         <TabsTrigger
           value="overview"
@@ -25,8 +26,8 @@ export default function DashboardTabs() {
         </TabsTrigger>
       </TabsList>
 
-      <TabsContent value="overview" className="py-6">
-        <p className="text-sm text-muted-foreground">Overview content placeholder.</p>
+      <TabsContent value="overview" className="py-3 flex flex-col gap-7">
+         <Summary />
       </TabsContent>
       <TabsContent value="transactions" className="py-6">
         <p className="text-sm text-muted-foreground">Transactions content placeholder.</p>

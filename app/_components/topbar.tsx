@@ -12,7 +12,7 @@ import Image from "next/image"
 
 export default function Topbar() {
   return (
-    <header className="flex w-full items-center justify-between gap-7 px-2 md:px-12 py-3">
+    <header className="flex w-full bg-background items-center justify-between gap-7 px-2 md:px-12 py-3">
       {/* Left section: Sidebar trigger and logo */}
       <section className="flex items-center gap-1 md:gap-7">
         <SidebarTrigger />
