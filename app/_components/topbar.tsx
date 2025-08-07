@@ -7,7 +7,8 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@/components/ui/avatar"
-import { SearchIcon, LayoutGridIcon } from "lucide-react"
+import { LayoutGridIcon } from "lucide-react"
+import SearchCommand from "./search-command"
 import Image from "next/image"
 
 export default function Topbar() {
@@ -21,9 +22,7 @@ export default function Topbar() {
 
       {/* Right section: Search, Grid, Avatar */}
       <section className="flex items-center gap-1 md:gap-7">
-        <Button variant="ghost" size="icon" aria-label="Search">
-          <SearchIcon className="size-5" />
-        </Button>
+        <SearchCommand />
         <Button variant="ghost" size="icon" aria-label="Applications">
           <LayoutGridIcon className="size-5" />
         </Button>
