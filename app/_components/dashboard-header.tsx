@@ -1,6 +1,7 @@
 "use client"
 
 import DashboardTitle from "./dashboard-title"
+import DashboardAvatars from "./dashboard-avatars"
 
 export default function DashboardHeader() {
   return (
@@ -9,8 +10,11 @@ export default function DashboardHeader() {
       <section>
         <DashboardTitle />
       </section>
-      {/* Placeholder for future filters, stats, etc. */}
-      <section></section>
+      {/* Avatars */}
+      <section>
+        {/* Dashboard avatars component */}
+        <DashboardAvatars />
+      </section>
       {/* Placeholder for breadcrumbs or other header content */}
       <section></section>
     </header>
