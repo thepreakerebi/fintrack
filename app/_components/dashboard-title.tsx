@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export default function DashboardTitle() {
   return (
-    <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 w-full">
+    <header className="flex flex-col sm:flex-row md:items-center justify-between gap-4 w-full">
       {/* Left group */}
       <section className="flex items-center gap-4">
         {/* Wallet Ledger with caret */}

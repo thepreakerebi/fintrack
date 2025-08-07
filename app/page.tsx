@@ -5,7 +5,7 @@ import DashboardHeader from "@/app/_components/dashboard-header";
 
 export default function Home() {
   return (
-    <section className="flex px-2 md:px-12 flex-col w-full h-screen">
+    <section className="flex px-4 md:px-12 flex-col w-full h-screen">
       {/* Fixed topbar section */}
       <section className="fixed inset-x-0 top-0 z-50 w-full">
         <Topbar />
