@@ -1,21 +1,27 @@
-"use client"
+"use client";
 
-import { MoreHorizontalIcon } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { MoreHorizontalIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface SummaryCardProps {
-  title: string
-  value: string
-  change: number // percentage change, positive or negative
+  title: string;
+  value: string;
+  change: number; // percentage change, positive or negative
 }
 
-export default function SummaryCard({ title, value, change }: SummaryCardProps) {
-  const isPositive = change >= 0
+export default function SummaryCard({
+  title,
+  value,
+  change,
+}: SummaryCardProps) {
+  const isPositive = change >= 0;
   return (
     <section className="relative flex flex-col gap-4 rounded-2xl bg-primary/5 p-8 sm:p-10">
       {/* Title & menu */}
       <section className="flex items-center justify-between w-full">
-        <h3 className="text-xl font-semibold leading-none text-foreground/90 w-full">{title}</h3>
+        <h3 className="text-lg font-semibold leading-none text-foreground/90 w-full">
+          {title}
+        </h3>
         <Button variant="ghost" size="icon" className="rounded-full">
           <MoreHorizontalIcon className="size-5" />
         </Button>
@@ -25,11 +31,12 @@ export default function SummaryCard({ title, value, change }: SummaryCardProps) 
         {value}
       </section>
       {/* Change */}
-      <span className={`text-sm font-medium ${isPositive ? "text-primary" : "text-destructive"}`}>
+      <span
+        className={`text-sm font-medium ${isPositive ? "text-primary" : "text-destructive"}`}
+      >
         {isPositive ? "+" : ""}
         {change}%
       </span>
     </section>
-  )
+  );
 }
-
