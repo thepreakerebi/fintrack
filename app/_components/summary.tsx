@@ -1,10 +1,33 @@
 "use client"
 
 import SummaryCard from "./summary-card"
+import SummaryCardSkeleton from "./summary-card-skeleton"
 import { useSummaryStore } from "@/hooks/use-summary"
+import { useState, useEffect } from "react"
+import { Skeleton } from "@/components/ui/skeleton"
+
+function SkeletonHeader() {
+  return <Skeleton className="h-8 w-32" />
+}
 
 export default function Summary() {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+
   const summary = useSummaryStore((s) => s.summary)
+
+  if (!mounted) {
+    return (
+      <section className="flex flex-col gap-4 py-3">
+        <SkeletonHeader />
+        <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {[...Array(4)].map((_, i) => (
+            <SummaryCardSkeleton key={i} />
+          ))}
+        </section>
+      </section>
+    )
+  }
 
   const cards = [
     {
@@ -40,4 +63,3 @@ export default function Summary() {
     </section>
   )
 }
-
