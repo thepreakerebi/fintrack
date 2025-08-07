@@ -30,7 +30,7 @@ export default function Summary() {
   ]
 
   return (
-    <section className="flex flex-col gap-4">
+    <section className="flex flex-col gap-4 py-3">
       <h2 className="text-2xl font-bold">Summary</h2>
       <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {cards.map((card) => (

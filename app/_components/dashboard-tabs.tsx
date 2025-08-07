@@ -2,6 +2,7 @@
 
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import Summary from "./summary"
+import HistoryTable from "./history-table"
 
 export default function DashboardTabs() {
   return (
@@ -26,8 +27,9 @@ export default function DashboardTabs() {
         </TabsTrigger>
       </TabsList>
 
-      <TabsContent value="overview" className="py-3 flex flex-col gap-7">
+      <TabsContent value="overview" className="py-3 flex flex-col">
          <Summary />
+        <HistoryTable />
       </TabsContent>
       <TabsContent value="transactions" className="py-6">
         <p className="text-sm text-muted-foreground">Transactions content placeholder.</p>
