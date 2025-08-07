@@ -2,6 +2,7 @@
 
 import SummaryCard from "./summary-card"
 import SummaryCardSkeleton from "./summary-card-skeleton"
+import SummaryCardEmpty from "./summary-card-empty"
 import { useSummaryStore } from "@/hooks/use-summary"
 import { useState, useEffect } from "react"
 import { Skeleton } from "@/components/ui/skeleton"
@@ -56,9 +57,11 @@ export default function Summary() {
     <section className="flex flex-col gap-4 py-3">
       <h2 className="text-2xl font-bold">Summary</h2>
       <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {cards.map((card) => (
-          <SummaryCard key={card.title} {...card} />
-        ))}
+        {cards.map((card) =>
+          card.value === "$0" || card.value === "0"
+            ? <SummaryCardEmpty key={card.title} />
+            : <SummaryCard key={card.title} {...card} />
+        )}
       </section>
     </section>
   )
